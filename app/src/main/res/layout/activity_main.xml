@@ -11,6 +11,71 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <EditText
+            android:id="@+id/edit_text_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:inputType="textCapWords"
+            android:maxLength="100" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:text="TOPPINGS"
+            android:textColor="@android:color/black"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/whippedcream_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="28dp" />
+
+            <TextView
+                android:id="@+id/whippedcream_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Whipped cream (1€)"
+                android:textColor="@android:color/black"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/chocolate_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="28dp" />
+
+            <TextView
+                android:id="@+id/chocolate_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chocolate (2€)"
+                android:textColor="@android:color/black"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
         <TextView
             android:id="@+id/quantity"
             android:layout_width="wrap_content"
@@ -18,20 +83,21 @@
             android:paddingLeft="16dp"
             android:text="QUANTITY"
             android:textColor="@android:color/black"
-            android:textSize="18dp"
+            android:textSize="16dp"
             android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:paddingLeft="16dp">
 
             <Button
                 android:id="@+id/decrement_button"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:text="-"
-                android:onClick="decrementCount"/>
+                android:onClick="decrementCount"
+                android:text="-" />
 
             <TextView
                 android:id="@+id/count_text_view"
@@ -40,7 +106,7 @@
                 android:layout_below="@id/quantity"
                 android:paddingLeft="16dp"
                 android:paddingTop="16dp"
-                android:text="0"
+                android:text="1"
                 android:textColor="@android:color/black"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -50,8 +116,8 @@
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="16dp"
-                android:text="+"
-                android:onClick="incrementCount"/>
+                android:onClick="incrementCount"
+                android:text="+" />
         </LinearLayout>
 
         <TextView
@@ -62,7 +128,7 @@
             android:paddingBottom="16dp"
             android:paddingLeft="16dp"
             android:paddingTop="16dp"
-            android:text="PRICE"
+            android:text="TOTAL PRICE"
             android:textColor="@android:color/black"
             android:textSize="16sp"
             android:textStyle="bold" />
@@ -74,7 +140,7 @@
             android:layout_below="@id/price_text_view"
             android:paddingBottom="16dp"
             android:paddingLeft="16dp"
-            android:text="0"
+            android:text="€5"
             android:textColor="@android:color/black"
             android:textSize="16sp"
             android:textStyle="bold" />
@@ -106,5 +172,9 @@
                 android:textSize="16dp"
                 android:textStyle="bold" />
         </LinearLayout>
+        <ImageView
+            android:src="@drawable/coffee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

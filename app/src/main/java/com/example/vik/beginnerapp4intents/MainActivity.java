@@ -1,12 +1,15 @@
 package com.example.vik.beginnerapp4intents;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -23,6 +26,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ImageView iv = (ImageView)findViewById(R.id.coffee_imageview);
+        iv.setColorFilter(Color.BLACK, PorterDuff.Mode.LIGHTEN);
+        iv.setBackgroundColor(Color.rgb(100, 100, 50));
         whippedcreamCheckBox = (CheckBox) findViewById(R.id.whippedcream_checkbox);
         chocolateCheckBox = (CheckBox) findViewById(R.id.chocolate_checkbox);
         editText = (EditText) findViewById(R.id.edit_text_input);
